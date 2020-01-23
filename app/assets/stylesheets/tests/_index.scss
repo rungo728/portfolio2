@@ -1,0 +1,44 @@
+.top-container{
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-right: 5px solid #e5d4d3;
+  border-left: 5px solid #e5d4d3;
+  .main-header{
+    margin-bottom: 0;
+    z-index: 100000;
+    padding: 5%;
+    display: flex;
+    .header-logo{
+      top: 4px;
+      width: 132px;
+      margin-right: auto;
+      a{
+        line-height: 1;
+        cursor: pointer;
+      }
+    }
+    .header-icon{
+      box-sizing: inherit;
+      position: relative; 
+      right: 0;
+      top: -2px;
+      z-index: inherit;      
+      ul{
+        li{
+          a{
+            display: block;
+            width: 27px;
+            height: 27px;
+            padding: 0;
+
+          }
+        }
+      }
+    }
+  }
+  .item-list{
+    width: 90%;
+
+  }
+} 
