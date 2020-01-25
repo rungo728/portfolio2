@@ -4,8 +4,27 @@ body{
   font-size: 14px;
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
 }
+h1{
+  margin-right: auto;
+}
 a{text-decoration: none;
   color: #e0b9b7;
   font-weight: bold;
-  font-size: 27px;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+ul{
+  position: relative;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+
+}
+li{
+  position: relative;
+  font-family: こぶりなゴシック W1 JIS2004;
+  color: #615858;
+  letter-spacing: 1px;
+  list-style: none;
 }
