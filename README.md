@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# KA１１designer
+ご覧いただきましてありがとうございます。
+<br>ポートフォリオサイトはいろんな依頼を受けて、フロントエンド・サーバーサイドで作成してみた機能をご覧いただき、
+<br>自分のスキルをアウトプットするページです。
