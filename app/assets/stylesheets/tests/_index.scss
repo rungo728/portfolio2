@@ -22,7 +22,7 @@
       }
       .sub-menu {
         font-weight: 300;
-        font-family: futura-pt, sans-serif;
+        font-family: '游明朝体','Yu Mincho', 'YuMincho','HiraMinProN-W3',YuGothic, 'Yu Gothic', 游ゴシック体, '游ゴシック', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'MS ゴシック', 'MS Gothic', sans-serif;
         list-style: none;
       }
       .sub-menu a {
@@ -31,6 +31,8 @@
         text-decoration: none;
         padding: 8px 14px;
         text-align: center;
+        font-size: 18px;
+
       }
       .sub-menu a:hover {
         background-color: #eee;
@@ -46,6 +48,11 @@
   height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
   cursor: pointer;
   z-index: 300;
+  p{
+    color: #000!important;
+    font-size: 8px;
+    letter-spacing: 0.55em;
+  }
   &__line{
     position: absolute;
     left: 11px;
@@ -111,7 +118,7 @@
     display: flex;
     .header-logo{
       top: 4px;
-      width: 132px;
+      width: 110px;
       a{
         line-height: 1;
         cursor: pointer;
@@ -179,9 +186,13 @@
       margin-right: 50px;
       display: block;
       .f01{
+        display: flex;
         font-family: futura-pt, sans-serif;
         font-weight: 300;
         font-style: normal;
+        .reservation{
+      
+        }
         a{
           color: #615858;
           font-size: 14px;
