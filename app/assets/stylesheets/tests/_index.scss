@@ -118,7 +118,7 @@
     display: flex;
     .header-logo{
       top: 4px;
-      width: 110px;
+      width: 130px;
       a{
         line-height: 1;
         cursor: pointer;
@@ -182,21 +182,49 @@
 .top-container{
   .main-header{
     .gnavi-pc{
-      width: 400px;
+      min-width: 500px;
       margin-right: 50px;
       display: block;
-      .f01{
+      float: right;
+      .image-gallery{
         display: flex;
         font-family: futura-pt, sans-serif;
         font-weight: 300;
         font-style: normal;
-        .reservation{
+        li{
+          min-width: 180px;
+        }
+        .customer-voices{
       
         }
-        a{
-          color: #615858;
-          font-size: 14px;
+        .bookingnow{
+          a{
+            background: #8E8457;
+            padding: 10px 50px 0;
+          }
+
+
+
         }
+        a{
+          display: block;
+          color: #1a1a1a !important;
+          font-size: 15px;
+          height: 55px;
+          text-align: center;
+          border-left: 1px solid #d0cbb7;
+          line-height: 25px;
+          padding: 10px 15px 0;
+          box-sizing: border-box;
+          font-family: "游明朝",Yu Mincho,YuMincho,"ヒラギノ明朝 ProN W3",Hiragino Mincho ProN,serif;
+          span{
+            display: block;
+            font-family: 'Crimson Text', serif;
+            font-size: 12px;
+  
+          }
+        }
+
         .sub-menu{
           left: 0;
           top: 28px;
@@ -205,6 +233,13 @@
           padding-top: 36px;
 
         }
+      }
+      .image-gallery:after{
+        content: ".";
+        clear: both;
+        display: block;
+        visibility: hidden;
+
       }
     }
     .header-icon{
