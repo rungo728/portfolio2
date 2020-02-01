@@ -2,17 +2,19 @@
   <header class="main-header">
     <h1 id= "header-logo" class= "header-logo">
       <%= link_to root_path do %>
-        <span>京都のモノ</span>
+      <span><a href="https://fontmeme.com/ja/font-trolls/"><img src="https://fontmeme.com/permalink/200201/d90c31edd394b1e81e7a9b0f1de6488c.png" alt="font-trolls" border="0"></a></span>
       <% end %>
     </h1>
     <nav id="gnavi-pc" class="gnavi-pc">
-      <ul class="f01">
+      <ul class="image-gallery">
         <li>
-          <%= link_to root_path do %>フォトギャラリー
+          <%= link_to root_path do %>イメージギャラリー
+          <span>Image</span>
           <% end %>
         </li>
-        <li class="reservation">
-          <%= link_to root_path do %>ご宿泊予約
+        <li class="customer-voices">
+          <%= link_to root_path do %>お客様の声
+          <span>Voice</span>
           <% end %>
           <ul class="sub-menu">
             <li>
@@ -48,6 +50,11 @@
               <% end %>
             </li>
           </ul>
+        </li>
+        <li class="bookingnow">
+          <%= link_to root_path do %>ご予約
+          <span>bookingnow</span>
+          <% end %>
         </li>
       </ul>
     </nav>
