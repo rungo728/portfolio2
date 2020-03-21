@@ -124,7 +124,8 @@
 
       }
       img{
-        width: 80px;
+        width: 200px;
+        height: 50px;
       }
     }
     .gnavi-pc{
@@ -184,6 +185,11 @@
 }
 .top-container{
   .main-header{
+    .header-logo{
+      img{
+        width: 80px;
+      }
+    }
     .gnavi-pc{
       min-width: 500px;
       margin-right: 50px;
@@ -196,14 +202,16 @@
         font-style: normal;
         li{
           min-width: 180px;
+          .writer{
+            width:200px;
+          }
         }
         .customer-voices{
-      
+          
         }
         .bookingnow{
           a{
             background: #8E8457;
-            padding: 10px 50px 0;
           }
         }
         a{
@@ -214,7 +222,7 @@
           text-align: center;
           border-left: 1px solid #d0cbb7;
           line-height: 25px;
-          padding: 10px 15px 0;
+          padding: 10px 5px 0;
           box-sizing: border-box;
           font-family: "游明朝",Yu Mincho,YuMincho,"ヒラギノ明朝 ProN W3",Hiragino Mincho ProN,serif;
           span{
