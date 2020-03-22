@@ -267,10 +267,11 @@
               display: block;
               font-family: 'Crimson Text', serif;
               font-size: 12px;
-    
-            }
+            } 
           }
-
+          .fa-sort-down{
+            padding: 0 5px;
+          }
         }
         .image-gallery:after{
           content: ".";
