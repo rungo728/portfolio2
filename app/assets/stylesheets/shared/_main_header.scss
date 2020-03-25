@@ -1,0 +1,304 @@
+// スマホ用ハンバーガーメニュー部分
+.gnavi-sp {
+  position: fixed;
+  right: -500px; /* これで隠れる */
+  top: 0;
+  width: 64%;  /* スマホに収まるくらい */
+  height: 100vh;
+  padding-top: 40px;
+  background-color: #e0b9b7;
+  transition: all .6s;
+  z-index: 200;
+  overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  .menu{
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    li{
+      a{
+        color: #fff;
+
+      }
+      .sub-menu {
+        font-weight: 300;
+        font-family: '游明朝体','Yu Mincho', 'YuMincho','HiraMinProN-W3',YuGothic, 'Yu Gothic', 游ゴシック体, '游ゴシック', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'MS ゴシック', 'MS Gothic', sans-serif;
+        list-style: none;
+      }
+      .sub-menu a {
+        display: block;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        padding: 8px 14px;
+        text-align: center;
+        font-size: 18px;
+
+      }
+      .sub-menu a:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}
+.hamburger {
+  position: absolute;
+  right: 0;
+  top: 10;
+  width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+  height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+  cursor: pointer;
+  z-index: 300;
+  p{
+    color: #000!important;
+    font-size: 8px;
+    letter-spacing: 0.55em;
+  }
+  &__line{
+    position: absolute;
+    left: 11px;
+    width: 18px;
+    height: 1px;
+    background-color: #111;
+    transition: all .6s;
+    &--1{
+      top: 14px;
+    }
+    &--2 {
+      top: 20px;
+    }
+    &--3 {
+      top: 26px;
+    }
+  }
+}
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s;
+  cursor: pointer;
+}
+/* 表示された時用のCSS */
+.nav-open .gnavi-sp {
+  right: 0;
+}
+.nav-open .black-bg {
+  opacity: .8;
+  visibility: visible;
+}
+.nav-open .hamburger__line--1 {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.nav-open .hamburger__line--2 {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger__line--3 {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+.top-container{
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-right: 5px solid #e5d4d3;
+  border-left: 5px solid #e5d4d3;
+  .main-header{
+    margin-bottom: 0;
+    z-index: 100000;
+    padding: 5%;
+    display: flex;
+    .header-logo{
+      top: 4px;
+      width: 130px;
+      a{
+        line-height: 1;
+        cursor: pointer;
+
+      }
+      img{
+        width: 200px;
+        height: 50px;
+      }
+    }
+    .gnavi-pc{
+      display: none;
+      // .f01{
+      //   font-family: futura-pt, sans-serif;
+      //   font-weight: 300;
+      //   font-style: normal;
+      //   a{
+      //     color: #615858;
+      //     font-size: 14px;
+      //   }
+      //   .sub-menu{
+      //     left: 0;
+      //     top: 28px;
+      //     width: 250px;
+      //     font-size: 14px;
+      //     padding-top: 36px;
+      //   }
+
+      // }
+    }
+    .header-icon{
+      box-sizing: inherit;
+      position: relative; 
+      right: 0;
+      top: -2px;
+      z-index: inherit;      
+      ul{
+        li{
+          a{
+            display: block;
+            width: 27px;
+            height: 27px;
+            padding: 0;
+            margin-right: 40px;
+          }
+          .fa-shopping-cart{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+  .item-list{
+    width: 90%;
+
+  }
+}
+ 
+@media screen and (min-width: 768px){
+.gnavi-sp{
+  display: none;
+}
+.hamburger{
+  display: none;
+}
+.top-container{
+  .main-header{
+    .header-logo{
+      img{
+        width: 80px;
+      }
+    }
+    .gnavi-pc{
+      min-width: 500px;
+      margin-right: 50px;
+      display: block;
+      float: right;
+      .header__menu-box{
+        .image-gallery{
+          display: flex;
+          font-family: futura-pt, sans-serif;
+          font-weight: 300;
+          font-style: normal;
+          li{
+            min-width: 180px;
+            .writer{
+              width:200px;
+            }
+          }
+          .header__menu-box--center__category{
+            font-weight: bold;
+            font-size:14px;
+            margin-right: 10px;
+            height: 55px;
+            line-height: 46px;
+            position: relative;//子要素のabsoluteのための記述
+            &:hover {
+              //以下はマウスオーバーした時の挙動
+              color: blue;
+              ul {
+                li {
+                //出現させる記述をかく
+                  display: block;
+                  height: 48px;
+                }
+              }
+            }
+          }
+          .header__menu-box--center__parents{
+            //出現した時の位置をかく
+            left: 0;
+            top: 28px;
+            width: 250px;
+            font-size: 14px;
+            padding-top: 36px;
+            position: absolute;
+            z-index: 1000;
+            font-weight: normal;
+            li {
+              //隠す記述をかく。上記のhoverで出現させる。
+              width: 220px;
+              height: 0;
+              display: none;
+              background-color: white;
+              &:hover {
+                color: blue;
+              }
+            }
+          }
+          .bookingnow{
+            a{
+              background: #8E8457;
+            }
+          }
+          a{
+            display: block;
+            color: #1a1a1a !important;
+            font-size: 15px;
+            height: 55px;
+            text-align: center;
+            border-left: 1px solid #d0cbb7;
+            line-height: 25px;
+            padding: 10px 5px 0;
+            box-sizing: border-box;
+            font-family: "游明朝",Yu Mincho,YuMincho,"ヒラギノ明朝 ProN W3",Hiragino Mincho ProN,serif;
+            span{
+              display: block;
+              font-family: 'Crimson Text', serif;
+              font-size: 12px;
+            } 
+          }
+          .fa-sort-down{
+            padding: 0 5px;
+          }
+        }
+        .image-gallery:after{
+          content: ".";
+          clear: both;
+          display: block;
+          visibility: hidden;
+        }
+      }
+    }
+    .header-icon{
+      box-sizing: inherit;
+      position: relative; 
+      right: 0;
+      top: -2px;
+      z-index: inherit;      
+      ul{
+        li{
+          a{
+            display: block;
+            width: 27px;
+            height: 27px;
+            padding: 0;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+}
