@@ -20,27 +20,20 @@ application up and running.
 * キーワードでタイトルから投稿された記事をあいまい検索ができるようにする。
 
 # DB設計
-Things you may want to cover:
 
-* Ruby version
+## usersテーブル
 
-* System dependencies
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|profile|text||
+|icon|string||
 
-* Configuration
+### Association
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# KA１１designer
+# KAblog
 ご覧いただきましてありがとうございます。
 <br>ポートフォリオサイトはいろんな依頼を受けて、フロントエンド・サーバーサイドで作成してみた機能をご覧いただき、
 <br>自分のスキルをアウトプットするページです。
