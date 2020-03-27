@@ -34,7 +34,7 @@ application up and running.
 
 ### Association
 
-## postテーブル
+## articlesテーブル
 投稿されたブログは複数の画像を投稿できる。
 <br>複数のタグをつけることができ、コメントやいいねをつけることができる。
 
@@ -42,6 +42,19 @@ application up and running.
 |------|----|-------|
 |title|string|null: false|
 |content|string|null: false|
+|user_id|integer|null: false|
+
+## commentsテーブル
+投稿された記事にコメントを投稿できる。
+* 文字が入力されてない状態では送信ボタンdisabledにする
+
+|Column|Type|Options|
+|------|----|-------|
+|comment|text|null: false|
+|user_id|integer|null: false|
+|article_id|integer|null: false|
+
+## Association
 
 # KAblog
 ご覧いただきましてありがとうございます。
