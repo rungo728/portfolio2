@@ -1,5 +1,10 @@
 # README
 
+# KAblog
+ご覧いただきましてありがとうございます。
+<br>私はプログラミングスクールを卒業して、現在もプログラミングのご依頼を受けながら新しいアプリや機能を作成することでいろんな人に強く良い影響を与えたくて、フロントエンド・サーバーサイドで作成してみた機能や、
+<br>私がアウトプットしてきたものをご紹介するページです。
+
 # コンセプト
 構造としてはいたって単純なブログアプリではあるが、javascriptを使って動的な動きのある見やすいサイトにする。
 Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更新・削除,いいね機能などのやったこのない機能にチャレンジする。
@@ -31,6 +36,7 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 ### Association
 
+
 ## articlesテーブル
 投稿されたブログは複数の画像を投稿できる。
 <br>複数のタグをつけることができ、コメントやいいねをつけることができる。
@@ -41,13 +47,16 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 |content|string|null: false|
 |user_id|integer|null: false|
 
+## Association
+
+
 ## commentsテーブル
 投稿された記事にコメントを投稿できる。
 * 文字が入力されてない状態では送信ボタンdisabledにする
 
 |Column|Type|Options|
 |------|----|-------|
-|comment|text|null: false|
+|content|text|null: false|
 |user_id|integer|null: false|
 |article_id|integer|null: false|
 
@@ -59,11 +68,28 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 |Column|Type|Options|
 |------|----|-------|
-|tag|string|null: false|
+|name|string|null: false|
 
 ## Association
 
-# KAblog
-ご覧いただきましてありがとうございます。
-<br>ポートフォリオサイトはいろんな依頼を受けて、フロントエンド・サーバーサイドで作成してみた機能をご覧いただき、
-<br>自分のスキルをアウトプットするページです。
+
+## article_tagsテーブル
+一つの記事は複数のタグを持ち、一つのタグは複数の記事を持つ。
+
+|Column|Type|Options|
+|------|----|-------|
+|article_id|integer|null: false|
+|tag_id|integer|null: false|
+
+## Association
+
+
+## favoritesテーブル
+記事にはお気に入り(いいね)をつけることができ、その数を表示したりいいね欄から記事に飛べる。
+
+|Column|Type|Options|
+|------|----|-------|
+|article_id|integer|null: false|
+|user_id|integer|null: false|
+
+## Association
