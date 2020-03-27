@@ -22,6 +22,7 @@ application up and running.
 # DB設計
 
 ## usersテーブル
+ユーザーはニックネームと自己紹介文、アイコンを設定できる。
 
 |Column|Type|Options|
 |------|----|-------|
@@ -32,6 +33,15 @@ application up and running.
 |icon|string||
 
 ### Association
+
+## postテーブル
+投稿されたブログは複数の画像を投稿できる。
+<br>複数のタグをつけることができ、コメントやいいねをつけることができる。
+
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|content|string|null: false|
 
 # KAblog
 ご覧いただきましてありがとうございます。
