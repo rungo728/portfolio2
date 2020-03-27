@@ -1,13 +1,10 @@
 # README
 
 # コンセプト
-構造としてはいたってブログアプリ。
-Twetterとの連携や、画像の複数投稿、投稿した記事の一覧表示などのやったこのない機能にチャレンジする。
+構造としてはいたって単純なブログアプリではあるが、javascriptを使って動的な動きのある見やすいサイトにする。
+Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更新・削除,いいね機能などのやったこのない機能にチャレンジする。
 また、スクール最終課題の時の経験を活かした機能を実装する。(アウトプット)
-デプロイ経験がAWSでのみのため、herokuを用いたデプロイに挑戦する。
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+デプロイ経験がAWSでのみのため,herokuを用いたデプロイに挑戦する。
 
 ## これから実装する部分
 * トップページではピックアップカテゴリーごとのページへ進むことができ、カテゴリーごとの新着の記事や画像を表示します。
@@ -53,6 +50,16 @@ application up and running.
 |comment|text|null: false|
 |user_id|integer|null: false|
 |article_id|integer|null: false|
+
+## Association
+
+## tagsテーブル
+記事にはタグをつけることができる。
+* すでにあるものに関してはタグのidを紐付け、新しいものに関しては作成した上で紐づける。
+
+|Column|Type|Options|
+|------|----|-------|
+|tag|string|null: false|
 
 ## Association
 
