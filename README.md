@@ -50,7 +50,7 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 |Column|Type|Options|
 |------|----|-------|
 |title|string|null: false|
-|content|string|null: false|
+|content|text|null: false|
 |user_id|integer|null: false|
 
 ## Association
