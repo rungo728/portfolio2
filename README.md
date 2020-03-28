@@ -23,6 +23,9 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 # DB設計
 
+# ER図
+<img src="https://i.gyazo.com/5820675fbe13b25a65e2d8bcbd9528ff.png" alt="Image from Gyazo" width="980"/>
+
 ## usersテーブル
 ユーザーはニックネームと自己紹介文、アイコンを設定できる。
 
