@@ -36,6 +36,9 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 ### Association
 
+- has_many :articles
+- has_many :articles, through: :comments
+- has_many :articles,through: :favorites
 
 ## articlesテーブル
 投稿されたブログは複数の画像を投稿できる。
@@ -49,9 +52,15 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 ## Association
 
+- has_many :users, through: :comments
+- has_many :users, through: :favorite
+- belongs_to :user
+- has_many :favorites
+- has_many :tags, through: :article_tags
+
 
 ## commentsテーブル
-投稿された記事にコメントを投稿できる。
+投稿された記事にコメントを投稿できる
 * 文字が入力されてない状態では送信ボタンdisabledにする
 
 |Column|Type|Options|
@@ -62,8 +71,11 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 ## Association
 
+- belongs_to :user
+- belongs_to :article
+
 ## tagsテーブル
-記事にはタグをつけることができる。
+記事にはタグをつけることができる
 * すでにあるものに関してはタグのidを紐付け、新しいものに関しては作成した上で紐づける。
 
 |Column|Type|Options|
@@ -72,6 +84,8 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 ## Association
 
+- belongs_to :article
+- belongs_to :tag
 
 ## article_tagsテーブル
 一つの記事は複数のタグを持ち、一つのタグは複数の記事を持つ。
@@ -93,3 +107,6 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 |user_id|integer|null: false|
 
 ## Association
+
+- belongs_to :user
+- belongs_to :article
