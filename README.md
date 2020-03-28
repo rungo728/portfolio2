@@ -110,3 +110,15 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 - belongs_to :user
 - belongs_to :article
+
+## imagesテーブル
+一つの記事に複数の画像投稿が可能
+
+|Column|Type|Options|
+|------|----|-------|
+|image|string|null: false|
+|article_id|integer|null: false|
+
+## Association
+
+- belongs_to :article
