@@ -116,7 +116,7 @@ Twetterとの連携や、画像の埋め込み,投稿した記事の編集・更
 
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null: false|
+|content|string|null: false|
 |article_id|integer|null: false|
 
 ## Association
