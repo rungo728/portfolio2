@@ -2,25 +2,80 @@
   <%= render partial: 'shared/main_header' %>
 </div>
 <!-- Blogのメインコンテンツエリア -->
-<div class="page-home">
-</div>
-<div class='side-manu'>
-  <div class='menu-content'>
-    <%= link_to '記事を投稿'%>
+<main id="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+	<div class="container">
+		<div class="row">
+      <div class="row-content picks">
+        <div class="row-content__item wrap">
+          <div class="thumbnail">
+            <%= image_tag "cooking１.jpg" %>
+            <%# <%= link_to root_path do %>
+          </div>
+          <h2 class="title">
+            <%= link_to '#' do %>
+              【料理初心者向け】
+              <br>料理学習の始め方
+              <br>【３ヶ月で達成できる】
+            <% end %>
+          </h2>
+          <div class="readmore">
+            <%= link_to 'READ MORE'%>
+          </div>
+        </div>
+        <div class="row-content__item wrap center">
+          <div class="thumbnail">
+            <%= image_tag "program1.jpg" %>
+            <%# <%= link_to root_path do %>
+          </div>
+          <h2 class="title">
+            <%= link_to '#' do %>
+              プログラミングスクール学習
+              <br>→就職までの道のり
+              <br>【体験談】【インタビュー】
+            <% end %>
+          </h2>
+          <div class="readmore">
+            <%= link_to 'READ MORE'%>
+          </div>
+        </div>
+        <div class="row-content__item wrap center">
+          <div class="thumbnail">
+            <%= image_tag "douga3.jpg" %>
+            <%# <%= link_to root_path do %>
+          </div>
+          <h2 class="title">
+            <%= link_to '#' do %>
+              人生初の動画編集での、
+              <br>裏側を書く
+              <br>【仕事ができる学生の特徴】
+            <% end %>
+          </h2>
+          <div class="readmore">
+            <%= link_to 'READ MORE'%>
+          </div>
+        </div>
+      </div>
+      <div class="row-content picks">
+      </div>
+    </div>
   </div>
+  <div class='side-manu'>
+    <div class='menu-content'>
+      <%= link_to '記事を投稿'%>
+    </div>
 
-  <div class='menu-search'>
-    <%= link_to '記事を検索'%>
+    <div class='menu-search'>
+      <%= link_to '記事を検索'%>
+    </div>
+
+    <div class='menu-content'>
+      <%= link_to 'マイページ'%>
+    </div>
+
+    <div class='menu-content'>
+      <%= link_to 'ログアウト'%>
+    </div>
   </div>
-
-  <div class='menu-content'>
-    <%= link_to 'マイページ'%>
-  </div>
-
-  <div class='menu-content'>
-    <%= link_to 'ログアウト'%>
-  </div>
-</div>
-
+</main>
 <footer>
 </footer>

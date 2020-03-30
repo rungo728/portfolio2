@@ -4,6 +4,9 @@ body{
   font-size: 14px;
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
 }
+main{
+  background: #F7F7F7;
+}
 h1{
   margin-right: auto;
 }
@@ -27,4 +30,10 @@ li{
   color: #615858;
   letter-spacing: 1px;
   list-style: none;
+}
+h2{
+  font-size: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+
 }
