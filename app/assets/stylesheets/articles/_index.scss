@@ -1,3 +1,36 @@
+.wrap{
+  background: #fff;
+  margin-top: 35px;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 70px;
+  padding-right: 40px;
+  padding-left: 10px;
+}
+.meta{
+  text-align: center;
+  font-size: 13px;
+  color: #7B7B7B;
+  padding-top: 60px;
+  margin-bottom: 10px;
+}
+.cat{
+  text-align: center;
+  a{
+    font-size: 13px;
+  }
+}
+.thumbnail{
+  margin-top: 30px;
+  border: none;
+  padding: 0;
+  .cookingtag{
+    img{
+      height: 300px;
+      width: 100%;
+    }
+  }
+}
 .container{
   margin-right: auto;
   margin-left: auto;
@@ -9,7 +42,6 @@
       position: relative;
       padding-left: 15px;
       padding-right: 15px;
-
       &__item{
         background-color: #fff;
         .thumbnail{
@@ -38,10 +70,21 @@
         }
       }
     }
+    .article{
+      .section{
+       //  本文の表示
+        .middle-content{
+          width: 100%;
+          &__item{
+
+          }
+        }
+      }
+    }
   }
 }
 
-.side-manu{
+.side-menu{
   margin: 20px 40px;
   background-color: #fff;
   .menu-search{
@@ -71,6 +114,10 @@
 @media (min-width: 768px){
 main .picks .wrap{
   width: 31.33333%;
+}
+main .wrap{
+  background: #fff;
+  margin-top: 35px;
 
 }
 .center{
@@ -79,12 +126,24 @@ main .picks .wrap{
 }
 .container{
   width: 750px;
- .row{
-   .row-content{
+  .row{
+    .row-content{
     display: flex;
     float: left;
-   }
- }
+    }
+    //  本文の表示
+    .middle-content{
+      margin-top: 35px;
+    }
+    .articlebody{
+      float: left;
+      width: 66.66667%;
+    }
+    .side-menu{
+      width: 33.33333%;
+      float: left;
+    }
+  }  
 }
 
 }
