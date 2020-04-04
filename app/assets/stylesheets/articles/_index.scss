@@ -4,8 +4,8 @@
   text-align: center;
   padding: 0;
   padding-bottom: 70px;
-  padding-right: 40px;
-  padding-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .meta{
   text-align: center;
@@ -24,6 +24,7 @@
   margin-top: 30px;
   border: none;
   padding: 0;
+  margin-bottom: 20px;
   .cookingtag{
     img{
       height: 300px;
@@ -31,13 +32,22 @@
     }
   }
 }
-.container{
+.description{
+  color: #e0b9b7;
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 17px;
+  line-height: 2;
+}
+.middle-container{
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 750px;
+  min-height: 100%;
   .row{
+    margin-left: -15px;
+    margin-right: -15px;
     .row-content{
       position: relative;
       padding-left: 15px;
@@ -66,51 +76,59 @@
           margin-top: 40px;
           border: 1px solid #909090;
           padding: 15px 33px 14px;
-
         }
+
       }
     }
-    .article{
-      .section{
+    .itemscope{
+      section{
        //  本文の表示
         .middle-content{
           width: 100%;
           &__item{
-
+            .readmore{
+              margin-top: 40px;
+              a{
+                border: 1px solid #909090;
+                padding: 15px 33px 14px;
+              }
+            }
           }
         }
       }
     }
   }
 }
-
-.side-menu{
-  margin: 20px 40px;
-  background-color: #fff;
-  .menu-search{
-    border-bottom: solid 1px #f5f5f5;
-    height: 40px;
-    a{
-      padding-left: 10px;
-      font-size: 14px;
-      color: #333;
-      line-height: 40px;
-      text-decoration: none;
+.sidebar{
+  margin-top: 35px;
+  background: #fff;
+  .side-menu{
+    margin: 20px 40px;
+    background-color: #fff;
+    .menu-search{
+      border-bottom: solid 1px #f5f5f5;
+      height: 40px;
+      a{
+        padding-left: 10px;
+        font-size: 14px;
+        color: #333;
+        line-height: 40px;
+        text-decoration: none;
+      }
+    }
+    .menu-content{
+      border-bottom: solid 1px #f5f5f5;
+      height: 40px;
+      a{
+        padding-left: 10px;
+        font-size: 14px;
+        color: #333;
+        line-height: 40px;
+        text-decoration: none;
+      }
     }
   }
-  .menu-content{
-    border-bottom: solid 1px #f5f5f5;
-    height: 40px;
-    a{
-      padding-left: 10px;
-      font-size: 14px;
-      color: #333;
-      line-height: 40px;
-      text-decoration: none;
-    }
-  }
-} 
-
+}
 @media (min-width: 768px){
 main .picks .wrap{
   width: 31.33333%;
@@ -124,24 +142,32 @@ main .wrap{
   margin-left: 3%;
   margin-right: 3%;
 }
-.container{
+.middle-container{
+  min-height: 100%;
+  width: 750px;
   .row{
     .row-content{
     display: flex;
     float: left;
     }
     //  本文の表示
-    .middle-content{
-      margin-top: 35px;
+    .itemscope{
+      section{
+        .middle-content{
+          width: 66%;
+          float: left;
+        }
+      }
     }
-    .articlebody{
-      float: left;
-      width: 66.66667%;
-    }
+  }
+  .sidebar{
+    width: 33%;
+    float: right;
     .side-menu{
-      width: 33.33333%;
-      float: left;
+      padding-bottom: 40px;
+
     }
+
   }  
 }
 

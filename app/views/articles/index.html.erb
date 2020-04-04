@@ -2,8 +2,8 @@
   <%= render partial: 'shared/main_header' %>
 </div>
 <!-- Blogのメインコンテンツエリア -->
-<main id="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-	<div class="container">
+<main id="main" itemprop="mainContentOfPage" class="itemscope">
+	<div class="middle-container">
 		<div class="row">
       <div class="row-content picks">
         <div class="row-content__item wrap">
@@ -56,7 +56,7 @@
         </div>
       </div>
       <!-- articleタグのマークアップ -->
-      <article itemscope="itemscope">
+      <article class="itemscope">
         <section>
           <!-- 本文の表示 -->
           <div class="middle-content articlebody">
@@ -87,28 +87,78 @@
                   <%= image_tag "cook2.jpg" %>
                 <% end %>
               </div>
+              <!-- ディスクリプションの表示 -->
+              <p class="description">
+                可愛くて機能的なエプロンが欲しい！
+                かわいい食器を集めたい
+                得意料理は煮物と答えた  い…
+                ズボラ飯と丁寧飯を作れるようになりたい。
+                健康的な食生活に…。
+              </p>
+              <div class="readmore">
+                <%= link_to 'READ MORE'%>
+              </div>
+            </div>
+          </div>
+          <!-- 本文の表示 -->
+          <div class="middle-content articlebody">
+            <div class="middle-content__item wrap">
+              <p class="meta">
+                <time itemprop="datePublished">2020/04/03</time>
+                <time itemprop="dateModified">(更新日: 2020/04/06)</time>
+              </p>
+              <!-- タイトル表示 -->
+              <h2 class="title">
+                <%= link_to '#' do %>
+                  プログラミングにはやってはいけない勉強法がある！？
+                  <br>爆速で成長する王道のプログラミング学習法を紹介！
+                  <br>【ポイントいっぱい紹介】
+                <% end %>
+              </h2>
+              <p class="cat">
+                <%= link_to '#' do %>
+                  動画編集
+                <% end %>
+                <%= link_to '#' do %>
+                  プログラミング
+                <% end %>
+              </p>
+              <!-- サムネイルの表示 -->
+              <div class="thumbnail">
+                <%= link_to root_path,class:"cookingtag" do %>
+                  <%= image_tag "program2.jpg" %>
+                <% end %>
+              </div>
+              <!-- ディスクリプションの表示 -->
+              <p class="description">
+                実はプログラミングの勉強は特殊です！
+                学校で勉強していた方法とは全然違います。
+                今回は、プログラミングの効率的な学習方法について解説しています。
+              </p>
+              <div class="readmore">
+                <%= link_to 'READ MORE'%>
+              </div>
             </div>
           </div>
         </section>
       </article>
+    </div>
+    <aside class="sidebar" id="sidebar">
       <div class='side-menu'>
         <div class='menu-content'>
           <%= link_to '記事を投稿'%>
         </div>
-
         <div class='menu-search'>
           <%= link_to '記事を検索'%>
         </div>
-
         <div class='menu-content'>
           <%= link_to 'マイページ'%>
         </div>
-
         <div class='menu-content'>
           <%= link_to 'ログアウト'%>
         </div>
       </div>
-    </div>
+    </aside>
   </div>
 </main>
 <footer>
