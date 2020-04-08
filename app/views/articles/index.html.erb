@@ -2,8 +2,8 @@
   <%= render partial: 'shared/main_header' %>
 </div>
 <!-- Blogのメインコンテンツエリア -->
-<main id="main" itemprop="mainContentOfPage" class="itemscope">
-	<div class="middle-container">
+<main id="main" class="l-container clearfix">
+	<div class="l-content">
 		<div class="row">
       <div class="row-content picks">
         <div class="row-content__item wrap">
@@ -99,67 +99,58 @@
                 <%= link_to 'READ MORE'%>
               </div>
             </div>
-          </div>
-          <!-- 本文の表示 -->
-          <div class="middle-content articlebody">
-            <div class="middle-content__item wrap">
-              <p class="meta">
-                <time itemprop="datePublished">2020/04/03</time>
-                <time itemprop="dateModified">(更新日: 2020/04/06)</time>
-              </p>
-              <!-- タイトル表示 -->
-              <h2 class="title">
+            <div class="middle-content_item navigation">
+              <div class="pull-left">
                 <%= link_to '#' do %>
-                  プログラミングにはやってはいけない勉強法がある！？
-                  <br>爆速で成長する王道のプログラミング学習法を紹介！
-                  <br>【ポイントいっぱい紹介】
-                <% end %>
-              </h2>
-              <p class="cat">
-                <%= link_to '#' do %>
-                  動画編集
-                <% end %>
-                <%= link_to '#' do %>
-                  プログラミング
-                <% end %>
-              </p>
-              <!-- サムネイルの表示 -->
-              <div class="thumbnail">
-                <%= link_to root_path,class:"cookingtag" do %>
-                  <%= image_tag "program2.jpg" %>
+                <i class="fas fa-chevron-left"></i>
+                  前のページ
                 <% end %>
               </div>
-              <!-- ディスクリプションの表示 -->
-              <p class="description">
-                実はプログラミングの勉強は特殊です！
-                学校で勉強していた方法とは全然違います。
-                今回は、プログラミングの効率的な学習方法について解説しています。
-              </p>
-              <div class="readmore">
-                <%= link_to 'READ MORE'%>
+              <div class="pull-right">
+                <%= link_to '#' do %>
+                  次のページ
+                <i class="fas fa-chevron-right"></i>
+                <% end %>
               </div>
             </div>
           </div>
         </section>
       </article>
+      <aside class="sidebar" id="sidebar">
+        <div class="middle-content author">
+          <%= image_tag "mrkr-icon.png" %>
+          <h4>
+            <span>カオ</span>
+          </h4>
+          <hr>
+          <p>
+            料理・プログラミングを愛しております,転職活動内容も発信,経歴：派遣事務→正社員事務9年→派遣経理（今ココ）→TECH56期卒業
+            /働きながら転職活動しながら個人アプリ作成中,
+            HTML/CSS/Javascript/Rudy/Rails
+          </p>
+          <div class="side-menu">
+            <div class='menu-content'>
+              <%= link_to '記事を投稿'%>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class='menu-search'>
+              <%= link_to '記事を検索'%>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class='menu-content'>
+              <%= link_to 'マイページ'%>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class='menu-content'>
+              <%= link_to 'ログアウト'%>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
-    <aside class="sidebar" id="sidebar">
-      <div class='side-menu'>
-        <div class='menu-content'>
-          <%= link_to '記事を投稿'%>
-        </div>
-        <div class='menu-search'>
-          <%= link_to '記事を検索'%>
-        </div>
-        <div class='menu-content'>
-          <%= link_to 'マイページ'%>
-        </div>
-        <div class='menu-content'>
-          <%= link_to 'ログアウト'%>
-        </div>
-      </div>
-    </aside>
   </div>
 </main>
+
 <footer>
 </footer>
