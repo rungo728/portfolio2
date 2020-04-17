@@ -134,6 +134,17 @@
             margin: 40px auto 0;
             object-fit: cover;
           }
+          .usericon {
+            img {
+              width: 130px;
+              border-radius: 50%;
+              display: block;
+              max-width: 100%;
+              height: auto;
+              margin: 40px auto 0;
+              object-fit: cover;
+            }
+          }
           h4 {
             text-align: center;
             font-weight: 600;

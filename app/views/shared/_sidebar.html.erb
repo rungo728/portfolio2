@@ -1,6 +1,16 @@
 <aside class="sidebar" id="sidebar">
   <div class="middle-content author">
-    <%= image_tag "mrkr-icon.png" %>
+    <% if user_signed_in? %>
+      <div class="usericon">
+        <% if current_user.icon.nil? %>
+          <%= image_tag "mrkr-icon.png" %>
+        <% else %>
+          <%= image_tag current_user.icon %>
+        <% end %>
+      </div>
+    <% else %>
+      <%= image_tag "mrkr-icon.png" %>
+    <% end %>
     <h4>
       <span>カオ</span>
     </h4>
